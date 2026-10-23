@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'midnight' } catch (e) { }</script>
+    <title>Himanshu Kumar | Frontend Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="port.css">
+</head>
+
+<body>
+
+    <div id="cube" aria-hidden="true"></div>
+
+    <header>
+        <div class="wrap">
+            <a class="logo" href="#home">HK<b>.</b></a>
+            <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <line x1="3" y1="7" x2="21" y2="7" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="17" x2="21" y2="17" />
+                </svg>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="themes" role="group" aria-label="Choose theme">
+                <button data-t="midnight" aria-pressed="true">Midnight</button>
+                <button data-t="eclipse" aria-pressed="false">Eclipse</button>
+            </div>
+        </div>
+        <div id="progress"></div>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home">
+            <div class="wrap hero">
+                <div>
+                    <div class="hello">Hello, I'm</div>
+                    <h1><span>Himanshu</span><span class="outline">Kumar</span></h1>
+                    <div class="role" id="role" aria-label="Frontend Developer">Frontend Developer</div>
+                    <p class="lead">I create modern, responsive and interactive websites using HTML, CSS and JavaScript.
+                    </p>
+                    <div class="actions">
+                        <a class="btn primary" href="#projects">View Projects <svg viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg></a>
+                        <a class="btn" href="#contact">Contact Me</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener"><svg
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg></a>
+                        <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg></a>
+                        <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener"><svg
+                                viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="block">
+            <div class="wrap two reveal">
+                <div>
+                    <div class="head"><small>About me</small>
+                        <h2>Designing with code, one detail at a time.</h2>
+                    </div>
+                    <p>Write two or three honest sentences here: what you study, what you enjoy building, and what you
+                        are
+                        learning right now.</p>
+                    <p>Mention what kind of work you are looking for, such as internships, freelance projects or a
+                        full-time role.
+                    </p>
+                </div>
+                <div class="stats">
+                    <div><b>1+</b><span>Years learning</span></div>
+                    <div><b>10</b><span>Projects built</span></div>
+                    <div><b>10</b><span>Happy clients</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="block">
+            <div class="wrap reveal">
+                <div class="head"><small>My skills</small>
+                    <h2>Tools I use every week</h2>
+                </div>
+                <div class="grid" id="skillGrid"></div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="block">
+            <div class="wrap reveal">
+                <div class="head"><small>My work</small>
+                    <h2>Selected projects</h2>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <div class="thumb" style="--g:linear-gradient(135deg,#4b2bd8,#1fb6e6)"></div>
+                        <h3>Project One</h3>
+                        <p>One line on what it does and who it is for.</p>
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div><a class="link"
+                            href="#">View
+                            project <svg viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg></a>
+                    </article>
+                    <article class="card">
+                        <div class="thumb" style="--g:linear-gradient(135deg,#1fb6e6,#0d3b66)"></div>
+                        <h3>Project Two</h3>
+                        <p>One line on what it does and who it is for.</p>
+                        <div class="tags"><span>React</span><span>API</span></div><a class="link" href="#">View project
+                            <svg viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg></a>
+                    </article>
+                    <article class="card">
+                        <div class="thumb" style="--g:linear-gradient(135deg,#7c4dff,#2a145f)"></div>
+                        <h3>Project Three</h3>
+                        <p>One line on what it does and who it is for.</p>
+                        <div class="tags"><span>Three.js</span><span>GSAP</span></div><a class="link" href="#">View
+                            project <svg viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="block">
+            <div class="wrap reveal">
+                <div class="head"><small>What I offer</small>
+                    <h2>Services</h2>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg></div>
+                        <h3>Website development</h3>
+                        <p>Fast, clean sites built with HTML, CSS and JavaScript.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24">
+                                <rect x="5" y="2" width="14" height="20" rx="2" />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg></div>
+                        <h3>Responsive design</h3>
+                        <p>Layouts that look right on phones, tablets and desktops.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24">
+                                <path d="M21 16V8l-9-5-9 5v8l9 5z" />
+                                <polyline points="3.3 7 12 12 20.7 7" />
+                                <line x1="12" y1="22" x2="12" y2="12" />
+                            </svg></div>
+                        <h3>3D web experiences</h3>
+                        <p>Interactive 3D scenes and animation with Three.js.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="block">
+            <div class="wrap reveal">
+                <div class="head"><small>Get in touch</small>
+                    <h2>Let's build something together</h2>
+                </div>
+                <form id="form">
+                    <input id="fn" placeholder="Your name" aria-label="Your name" required>
+                    <input id="fe" type="email" placeholder="Your email" aria-label="Your email" required>
+                    <textarea id="fm" placeholder="Your message" aria-label="Your message" required></textarea>
+                    <button class="btn primary" type="submit" style="justify-self:start">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 Himanshu Kumar. Built with HTML, CSS, JavaScript and Three.js.</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="port.js"></script>
+</body>
+
+</html>
